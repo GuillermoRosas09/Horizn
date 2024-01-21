@@ -118,7 +118,7 @@ const render = () => {
 
       // give 1 point & create a new pipe
       if (pipe[0] <= -pipeWidth) {
-        currentScore+10;
+        currentScore+=10;
         // check if it's the best score
         bestScore = Math.max(bestScore, currentScore);
 
@@ -154,8 +154,8 @@ const render = () => {
     ctx.font = "bold 30px courier";
   }
 
-  document.getElementById('bestScore').innerHTML = `Mejor Pago : ${bestScore}`;
-  document.getElementById('currentScore').innerHTML = `Pago Actual : ${currentScore}`;
+  document.getElementById('bestScore').innerHTML = `Mejor Pago: ${bestScore} Pesos`;
+  document.getElementById('currentScore').innerHTML = `Pago Actual: ${currentScore} Pesos`;
 
   // tell the browser to perform animation
   window.requestAnimationFrame(render);
